@@ -1,9 +1,9 @@
 # How to connect your littleBits to Node-RED in IBM Bluemix
-In this tutorial we describe how you can integrate your littleBits with the Node-RED environment in IBM Bluemix. It discusses the minimum that is needed to complete this integration. We have attached a sample flow that was used to create our tweeting and singing Bluemix banana.
+In this tutorial is described how you can integrate your littleBits with the Node-RED environment in IBM Bluemix. It discusses the minimum that is needed to complete this integration. Attached is a sample flow that was used to create the tweeting and singing Bluemix banana.
 
 ## What do you need?
 ###### At least
-* An IBM Bluemix account. If you don’t have one, please register for a free account at http://ibm.biz/bluemixnl. Click 'Sign Up' to create your free account.
+* An IBM Bluemix account. If you don’t have one, please register for a free account at http://ibm.biz/bluemixnl. Click 'SIGN UP' to create your free account.
 
 * <img align="middle" src="./images/p3.png" height="60">
 A littleBits USB input bit ( _p3 usb power_ ) + USB cable + power
@@ -19,20 +19,20 @@ A littleBits USB input bit ( _p3 usb power_ ) + USB cable + power
 * <img align="middle" src="./images/o24.png" height="60"> A littleBits Synth speaker output bit ( _o24 synth speaker_ ).
 
 ## Connect your Cloudbit to the littleBits cloud
-The first step is to connect your Cloudbit to the LittleBits cloud, so that the Cloudbit is known to the littleBits cloud and can start to send and receive data.
+The first step is to connect your Cloudbit to the littleBits cloud, so that the Cloudbit is known to this cloud and can start sending and receiving data.
 
-Go to http://control.littlebitscloud.cc/ and sign in with your userid and password. First time visitors need to register first.
+1. Go to http://control.littlebitscloud.cc/ and sign in with your userid and password. First time visitors need to register first.
 
-Once you’re logged in, click on ‘+ New Cloudbit’ and assign a name to your Cloudbit. Click ‘Save’ to complete this step and start the setup of your Cloudbit.
+2. Once you’re logged in, click on ‘+ New Cloudbit’ and assign a name to your Cloudbit. Click ‘Save’ to complete this step and start the setup of your Cloudbit.
 
-Follow Step 1 - 5 on the screen to complete the setup of your Cloudbit. If everything went fine, the Cloudbit’s status led should be green. This means the bit is connected to the littleBits cloud and is ready to send and receive data.
+3. Follow Step 1 - 5 on the screen to complete the setup of your Cloudbit. If everything went fine, the Cloudbit’s status led should be green. This means the bit is connected to the littleBits cloud and is ready to send and receive data.
 
 ## Create a Node-RED environment in IBM Bluemix
 The next step is to set up a Node-RED environment in IBM Bluemix. For this, click on the 'Deploy to Bluemix' button and follow the instructions.
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://hub.jazz.net/git/eciggaar/bluemixbanana )
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://hub.jazz.net/git/eciggaar/bluemixbanana)
 
-A Node-RED environment will be created for you in IBM Bluemix and the tweeting and singing banana sample flow will be deployed for you.
+A Node-RED environment will be created for you in IBM Bluemix and the tweeting and singing banana sample flow will be deployed for you. Once the application successfully deployed, click on the 'VIEW YOUR APP' button to see your app. A new tab will be opened for this. On this page, click the 'Go to your Node-RED editor' button to open the Node-RED editor.
 
 ## Create your Node-RED flow
 Now both the Cloudbit and the Node-RED environment have been set up and configured, it is time to create your flow. For this flow to be capable of communicating with the littleBits Cloudbit, you need to be able to send and receive data from it.
