@@ -109,4 +109,4 @@ The Node-RED flow that is deployed as sample flow illustrates the integration de
 </p>
 Make sure that you modify the nodes to match your own values for the Cloudbit and twitter account.
 
-*Have fun!!*
+Have fun and **happy** coding!!
