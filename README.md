@@ -5,7 +5,7 @@ In this tutorial we describe how you can integrate your littleBits with the Node
 ###### At least
 * An IBM Bluemix account. If you don’t have one, please register for a free account at http://bluemix.net
 
-* <img align="middle" src="./images/p3_1.png">
+* <img align="middle" src="./images/p3.png" height="60">
 A littleBits USB input bit ( _p3 usb power_ ) + USB cable + power
 
 * <img align="middle" src="./images/w20.png" height="60"> A littleBits Cloudbit connector bit ( _w20 cloud_ )
@@ -109,4 +109,4 @@ The Node-RED flow that is deployed as sample flow illustrates the integration de
 </p>
 Make sure that you modify the nodes to match your own values for the Cloudbit and twitter account.
 
-Have fun!!
+*Have fun!!*
