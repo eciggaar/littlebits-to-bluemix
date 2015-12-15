@@ -5,7 +5,7 @@ In this tutorial we describe how you can integrate your littleBits with the Node
 ###### At least
 * An IBM Bluemix account. If you don’t have one, please register for a free account at http://bluemix.net
 
-* <img align="middle" src="./images/p3.png" height="60">
+* <img align="middle" src="./images/p3_1.png">
 A littleBits USB input bit ( _p3 usb power_ ) + USB cable + power
 
 * <img align="middle" src="./images/w20.png" height="60"> A littleBits Cloudbit connector bit ( _w20 cloud_ )
@@ -104,9 +104,9 @@ return msg;
 ```
 ### The tweeting and singing Banana sample flow
 The Node-RED flow that is deployed as sample flow illustrates the integration described above. It receives events sent by the Cloudbit. Next, using an iterator — which is reset every day — it tweets how many times it has been invoked that day. Finally, it invokes the Cloudbit to trigger the next step in the littleBits set-up. In our example the Cloudbit triggered a bargraph bit (O9) for 5 seconds, followed by playing a song from the MP3 player bit (i25). Because the initial Cloudbit event was triggered by a Makey Makey bit (w14), connected to a banana, this makes our banana a tweeting and singing banana powered by littleBits and IBM Bluemix.
-
-<img align="center" src="./images/bluemixbanana.jpg" height="300">
-
+<p align="center">
+<img src="./images/bluemixbanana.jpg" height="300">
+</p>
 Make sure that you modify the nodes to match your own values for the Cloudbit and twitter account.
 
 Have fun!!
