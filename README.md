@@ -5,7 +5,7 @@ In this tutorial we describe how you can integrate your littleBits with the Node
 ###### At least
 * An IBM Bluemix account. If you don’t have one, please register for a free account at http://bluemix.net
 <div>
-* <img style="height:60px;vertical-align:middle" src="./images/p3.png">
+<img style="height:60px;vertical-align:middle" src="./images/p3.png">
 <span>A littleBits USB input bit ( _p3 usb power_ ) + USB cable + power</span>
 </div>
 * <img src="./images/w20.png" height="60"> A littleBits Cloudbit connector bit ( _w20 cloud_ )
