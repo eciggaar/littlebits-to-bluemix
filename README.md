@@ -5,7 +5,7 @@ In this tutorial we describe how you can integrate your littleBits with the Node
 ###### At least
 * An IBM Bluemix account. If you don’t have one, please register for a free account at http://bluemix.net
 
-* <img src="./images/p3.png" height="60"> A littleBits USB input bit ( _p3 usb power_ ) + USB cable + power
+* <img style="vertical-align:middle" src="./images/p3.png" height="60"> A littleBits USB input bit ( _p3 usb power_ ) + USB cable + power
 
 * <img src="./images/w20.png" height="60"> A littleBits Cloudbit connector bit ( _w20 cloud_ )
 
@@ -73,9 +73,7 @@ curl -X POST -H "Authorization: Bearer <access_token>" -H "Content-Type: applica
 Important is to specify both the ‘Authorization’ and ‘Content-Type’ header. The body is just an example payload. Both values are optional. If they are not specified, 100% is used as the default value for the percentage and 3000 (ms) as the default value for the duration.
 
 To translate the above REST call in Node-RED nodes, we need an HTTP output node and a function node. They need to be linked with the HTTP input node as illustrated below.
-
 ![Node-RED flow](./images/flow.png)
-
 The HTTP output node contains the URL and the request method. In this case the URL would be:
 ```
 http.littlebitscloud.cc/v3/devices/<device_id>/output
