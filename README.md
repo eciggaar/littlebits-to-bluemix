@@ -5,18 +5,18 @@ In this tutorial we describe how you can integrate your littleBits with the Node
 ###### At least
 * An IBM Bluemix account. If you don’t have one, please register for a free account at http://bluemix.net
 
-* <img align="middle" src="./images/p3.png" height="60">
+* <img align="middle" src="./images/p3_1.png">
 A littleBits USB input bit ( _p3 usb power_ ) + USB cable + power
 
-* <img src="./images/w20.png" height="60"> A littleBits Cloudbit connector bit ( _w20 cloud_ )
+* <img align="middle" src="./images/w20.png" height="60"> A littleBits Cloudbit connector bit ( _w20 cloud_ )
 
-* <img src="./images/o9.png" height="60"> A littleBits output bit ( _e.g. o9 bargraph_ )
+* <img align="middle" src="./images/o9.png" height="60"> A littleBits output bit ( _e.g. o9 bargraph_ )
 
 ###### Extra bits for the Banana sample flow
 <p/>
-* <img src="./images/w14.png" height="60"> A littleBits Makey Makey input bit ( _w14 makey makey_ ) + connectors
+* <img align="middle" src="./images/w14.png" height="60"> A littleBits Makey Makey input bit ( _w14 makey makey_ ) + connectors
 
-* <img src="./images/o24.png" height="60"> A littleBits Synth speaker output bit ( _o24 synth speaker_ ).
+* <img align="middle" src="./images/o24.png" height="60"> A littleBits Synth speaker output bit ( _o24 synth speaker_ ).
 
 ## Connect your Cloudbit to the littleBits cloud
 The first step is to connect your Cloudbit to the LittleBits cloud, so that the Cloudbit is known to the littleBits cloud and can start to send and receive data.
