@@ -40,7 +40,7 @@ Now both the Cloudbit and the Node-RED environment have been set up and configur
 ###### Receiving data from the Cloudbit
 One possible way of receiving data from the Cloudbit is to start your flow with a HTTP Input node. This node needs to be able to receive events that are sent by the Cloudbit. For this, you need to add your node as a subscriber to the Cloudbit. This is done via the following REST API call:
 ```
-curl -X POST -H "Authorization: Bearer <your_access_token>" -H "Content-Type: application/json" -d '{"publisher_id": "<deviceid_cloudbit>","subscriber_id": “<subscriber_uri>"}' 'https://api-http.littlebitscloud.cc/v2/subscriptions'
+curl -X POST -H "Authorization: Bearer <your_access_token>" -H "Content-Type: application/json" -d '{"publisher_id": "<deviceid_cloudbit>","subscriber_id": "<subscriber_uri>"}' 'https://api-http.littlebitscloud.cc/v2/subscriptions'
 ```
 where `<deviceid_cloudbit>` is the unique identifier of your Cloudbit and `<subscriber_id>` the URL of the subscribing HTTP input node. The `<access_token>` is your simple authentication token. Every REST call must have an Authorization header containing this token. It is listed under the ‘Settings’ of your registered Cloudbit on the littleBits Cloud Control site.
 
@@ -62,7 +62,7 @@ curl -X GET -H "Authorization: Bearer <access_token>" 'https://api-http.littlebi
 ```
 Finally, the following call will remove your subscription from the Cloudbit:
 ```
-curl -X DELETE -H "Authorization: Bearer <access_token>" -H "Content-Type: application/json" -d '{"publisher_id": "<deviceid_cloudbit>","subscriber_id": “<subscriber_uri>"}' 'https://api-http.littlebitscloud.cc/v2/subscriptions'
+curl -X DELETE -H "Authorization: Bearer <access_token>" -H "Content-Type: application/json" -d '{"publisher_id": "<deviceid_cloudbit>","subscriber_id": "<subscriber_uri>"}' 'https://api-http.littlebitscloud.cc/v2/subscriptions'
 ```
 Only execute this call when your no longer wish to send your events to the Node-RED input node.
 
@@ -83,19 +83,19 @@ and the method is set to POST. Replace `<device_id>` with the actual value of yo
 The function node is used to prepare the message body and the request headers. The implementation of the node is as follows.
 ```
 // First store percent value of received message
-percentage = msg.payload.percent;
+percentage = msg.payload.payload.percent;
 msg={}; // Empty message for HTTP call to Cloudbit
 
-console.log('percentage:' + percentage);
+node.log('percentage:' + percentage);
 
 // Set headers for HTTP call to Cloudbit
 msg.headers = {
-    "Authorization" : "Bearer <access_token>",
+    "Authorization" : "Bearer <your_access_token>",
     "Content-type" : "application/json"
 };
 
 // Set message body for HTTP call to Cloudbit
-msg.body = {
+msg.payload = {
   "percent": percentage,
   "duration_ms": "5000"
 }
